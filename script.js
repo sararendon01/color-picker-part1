@@ -1,8 +1,8 @@
 window.onload = function() {
-	initColorpicker();
+	initColorPicker();
 };
 
-function initcolorpicker() {
+function initColorPicker() {
 	let colorBox = document.getElementById("color-box")
 	let rgb = {
 		red: document.getElementById("red"),
@@ -14,13 +14,13 @@ function initcolorpicker() {
 }
 
 function setColorPickerEventListeners(element, colors, pickerElements) {
-	let pickerlen = pickerElement.length;
+	let pickerlen = pickerElements.length;
 	for (let i = 0; i < pickerlen; i++){
 		pickerElements[i].addEventListener('change',() =>{
 			let red = colors.red.value;
 			let green = colors.green.value;
 			let blue = colors.blue.value;
-	setElemtBGColor(element, red, green, blue);
+	setElementBGColor(element, red, green, blue);
 	setDisplayValues(red, green, blue)
 		});
 	}
